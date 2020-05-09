@@ -1,0 +1,18 @@
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+import UIKit
+
+extension UIImage {
+  enum Asset: String {
+    case Apple = "Apple"
+    case Banana = "Banana"
+
+    var image: UIImage {
+      return UIImage(asset: self)
+    }
+  }
+
+  convenience init!(asset: Asset) {
+    self.init(named: asset.rawValue)
+  }
+}
